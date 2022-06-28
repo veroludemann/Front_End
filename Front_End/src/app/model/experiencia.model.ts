@@ -5,8 +5,8 @@ export interface Experiencia {
   id:number;
   empresa:string;
   cargo:string;
-  FechaIngreso:string;
-  FechaEgreso:string;
+  fechaIngreso:string;
+  fechaEgreso:string;
   persona: PersonaService;
 
 }

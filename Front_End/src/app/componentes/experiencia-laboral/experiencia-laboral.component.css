@@ -1,7 +1,7 @@
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+
+  padding:1px 1px 2px 10px;
+
   background-color: #005086;
   color: aliceblue;
 }
@@ -13,7 +13,7 @@
 .contenido h4 button i {
   font-size: 12px;
   padding: 5px;
-  color: #b1189c;
+  color: #f8e6f1;
 
 
 }
@@ -30,7 +30,7 @@
 
 
 .listatrabajosparrafos:hover {
-  box-shadow: 2px 5px 15px #b1189c;
+  box-shadow: 2px 2px 10px #f8e6f1;
   transition: 0.2s;
 }
 .listatrabajosparrafos p {
@@ -48,7 +48,7 @@
 
 
 #eliminar-editar-trabajos button i {
-  color: #b1189c;
+  color: #f8e6f1;
   font-size: 10px;
 }
 
@@ -61,7 +61,7 @@
 .boton_edicion_texto {
   padding: 2px 10px;
   margin-top: 10px;
-  background: #7C3772;
+  background: #f8e6f1;
   color:#f8e6f1;
   border-radius: 5px;
   font-size: 10px;
@@ -76,13 +76,13 @@
   border-radius: 50%;
   border: none;
   background:#f8e6f1;
-  color: #7C3772;
+  color: #f8e6f1;
 }
 
 .boton_eliminar {
   padding: 2px 10px;
   margin-top: 10px;
-  background: #7C3772;
+  background: #f8e6f1;
   color:#f8e6f1;
   border-radius: 5px;
   font-size: 10px;
@@ -109,11 +109,11 @@
   border: none;
   background: none;
   text-align: right;
-  color: #720F64;
+  color: #f8e6f1;
 }
 
 .modal-header h5 {
-  color: #720F64;
+  color: #f8e6f1;
   text-transform: uppercase;
   font-weight: bold;
 }
@@ -130,7 +130,7 @@
 .modal-body form label {
   line-height: 7px;
   margin-top: 5px;
-  color: #720F64;
+  color: #f8e6f1;
 }
 
 .modal-footer {
@@ -143,7 +143,7 @@
 
 .modal-footer button {
   border: none;
-  color: #720F64;
+  color: #f8e6f1;
   margin: 5px;
   padding: 2px 5px;
   border-color: none;
@@ -152,7 +152,7 @@
 
 .modal-footer .boton-editar {
   border: none;
-  color: #720F64;
+  color: #f8e6f1;
   margin: 5px;
   padding: 2px 5px;
   border-color: none;
@@ -164,5 +164,5 @@
 
 #update-experiencia-modal {
   padding: 3px 5px;
-  color: #720F64;
+  color: #f8e6f1;
 }

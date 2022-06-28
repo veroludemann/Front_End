@@ -1,35 +1,30 @@
 <div class="fondo">
   <div class="contenido" id="main-container">
-      <div id="trabajos">
+    <div id="trabajos">
+      <h2 class="trabajos">Experiencia Laboral <button (click)="onOpenModal(null!,'add')" type="button"
+          class="botones_contenido">
+          <i class="fa-light fa-plus"></i>
+        </button> </h2>
+    </div>
+    <div class="listatrabajos" *ngFor="let experiencia of experiencias">
+      <div class="listatrabajosparrafos">
+        <p class="nombreempresa">{{experiencia?.empresa}} - {{experiencia?.cargo}} - {{experiencia?.fechaIngreso}} - {{experiencia?.fechaEgreso}}</p>
 
-
-
-    <h2 class="trabajos">Experiencia Laboral <button (click)="onOpenModal(null!,'add')" type="button" class="botones_contenido">
-      <i class="fa-light fa-plus"></i>
-  </button> </h2>
-</div>
-
-
-
-
-      <div  class="listatrabajos" *ngFor="let experiencia of experiencia">
-        <div class="listatrabajosparrafos">
-
-        <p class="nombreempresa"><span class="titulo">{{experiencia?.empresa}} - {{experiencia?.cargo}}</span></p>
-        <h2>{{experiencia.FechaIngreso}}  {{experiencia.FechaEgreso}}</h2>
       </div>
-
       <div id="eliminar-editar-trabajos">
         <button (click)="onOpenModal(experiencia,'edit')" type="button" class="botones_contenido">
-            <i class="fa-solid fa-pen"></i>
+          <i class="fa-solid fa-pen"></i>
         </button>
         <button (click)="onOpenModal(experiencia,'delete')" type="button" class="botones_contenido">
-            <i class="fa-solid fa-eraser"></i>
+          <i class="fa-solid fa-eraser"></i>
         </button>
-
+      </div>
+    </div>
+  </div>
+</div>
 
       <!-- Modal para agregar Experiencia -->
-<div class="modal fade" id="addExperienciaModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="addExperienciaModal" aria-hidden="true">
+<div class="modal fade" id="onAddExperiencia" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="addExperienciaModal" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
@@ -61,11 +56,11 @@
 
 
 <!-- Modal para actualizar Experiencia -->
-<div class="modal fade" id="updateExperienciaModal" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="updateExperienciaModal" aria-hidden="true">
+<div class="modal fade" id="editExperienciaModal" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="editExperienceModalLabel" aria-hidden="true">
   <div class="modal-dialog">
       <div class="modal-content">
           <div class="modal-header">
-              <h5 class="modal-title" id="staticBackdropLabel">Editar Experiencia</h5>
+              <h5 class="modal-title" id="editExperienceModalLabel">Editar Experiencia</h5>
               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
               <span aria-hidden="true">&times;</span>
               </button>
@@ -77,12 +72,12 @@
                   <label for="Empresa">Empresa</label><br>
                   <input ngModel="{{editExperiencia?.empresa}}" type="text" name="Empresa"  class="form-control">
                   <label for="fechaIngreso">Fecha de Igreso</label><br>
-                  <input ngModel="{{editExperiencia?.FechaIngreso}}" type="text" name="fechaIngreso" class="form-control">
+                  <input ngModel="{{editExperiencia?.fechaIngreso}}" type="text" name="fechaIngreso" class="form-control">
                   <label for="fechaEgreso">Fecha de Egreso</label><br>
-                  <input ngModel="{{editExperiencia?.FechaEgreso}}" type="text" name="fechaEgreso"  class="form-control">
+                  <input ngModel="{{editExperiencia?.fechaEgreso}}" type="text" name="fechaEgreso"  class="form-control">
                 <div class="modal-footer">
-                      <button id="update-experiencia-modal" type="button" class="btn" data-dismiss="modal">Cancelar</button>
-                      <button (click)="onUpdateExperiencia(editForm.value)" type="button" class="btn" data-dismiss="modal">Guardar cambios</button>
+                      <button id="updateExperiencia" type="button" class="btn" data-dismiss="modal">Cancelar</button>
+                      <button (click)="onEditExperiencia(editForm.value)" type="button" class="btn" data-dismiss="modal">Guardar cambios</button>
                   </div>
               </form>
           </div>
@@ -92,7 +87,7 @@
 </div>
 
 <!-- Modal para borrar Experiencia -->
-<div class="modal fade" id="deleteExperienciaModal" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="deleteExperienciaModal" aria-hidden="true">
+<div class="modal fade" id="deleteExperienciaModal" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="deleteExperienciaLabel" aria-hidden="true">
   <div class="modal-dialog">
       <div class="modal-content">
           <div class="modal-header">

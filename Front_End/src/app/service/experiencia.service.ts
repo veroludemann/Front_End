@@ -24,7 +24,7 @@ public updateExperiencia(experiencia: Experiencia): Observable<Experiencia>{
   return this.http.put<Experiencia>(`${this.apiServerUrl}/experiencia/update`, experiencia);
 }
 
-public deleteExperiencia(experienciaId: number): Observable<void>{
-  return this.http.delete<void>(`${this.apiServerUrl}/experiencia/delete/${experienciaId}`);
+public deleteExperiencia(id: number): Observable<void>{
+  return this.http.delete<void>(`${this.apiServerUrl}/experiencia/delete/${id}`);
 }
 }
