@@ -14,9 +14,6 @@ export class ExperienciaLaboralComponent implements OnInit {
   public editExperiencia!: Experiencia;
   public deleteExperiencia!: Experiencia;
 
-
-
-
   constructor(private experienciaService: ExperienciaService) { }
 
   ngOnInit(): void {
