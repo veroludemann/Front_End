@@ -10,7 +10,6 @@ import { ExperienciaLaboralComponent } from './componentes/experiencia-laboral/e
 import { EducacionComponent } from './componentes/educacion/educacion.component';
 import { NgCircleProgressModule } from 'ng-circle-progress';
 import { HySComponent } from './componentes/hy-s/hy-s.component';
-import { ProyectoComponent } from './componentes/proyecto/proyecto.component';
 import { FooterComponent } from './componentes/footer/footer.component';
 import {HttpClientModule} from '@angular/common/http';
 import { HomeComponent } from './componentes/home/home.component';
@@ -27,7 +26,6 @@ import { FormsModule } from '@angular/forms';
     ExperienciaLaboralComponent,
     EducacionComponent,
     HySComponent,
-    ProyectoComponent,
     FooterComponent,
     HomeComponent,
     LoginComponent,

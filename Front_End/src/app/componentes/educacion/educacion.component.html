@@ -1,26 +1,99 @@
 <div class="row">
   <h1>Educacion</h1>
   <div class="col-lg-11"></div>
-  <div>
-    <ul>
-      <li><h1>educacion</h1> -
-      <h3>(years)</h3></li>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam perferendis sapiente obcaecati cumque. Voluptates voluptatibus laudantium fuga dignissimos magni. Ullam optio numquam veritatis tenetur tempore quisquam error similique nostrum laboriosam?</p>
-    </ul>
+    <div id="main-container" *ngFor="let educacion of educaciones">
+        <h5>{{educacion?.institucion}} - {{educacion?.especialidad}}</h5>
+        <h6>{{educacion?.fechainicio}} - {{educacion?.fechafin}}</h6>
+        <button (click)="onOpenModal(educacion,'edit')" type="button" class="botones_contenido">
+          <i class="fa-solid fa-pen"></i>
+        </button>
+        <button (click)="onOpenModal(educacion,'delete')" type="button" class="botones_contenido">
+          <i class="fa-solid fa-eraser"></i>
+        </button>
+    </div>
 
-    <ul>
-      <li><h1>educacion</h1> -
-      <h3>(years)</h3></li>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam perferendis sapiente obcaecati cumque. Voluptates voluptatibus laudantium fuga dignissimos magni. Ullam optio numquam veritatis tenetur tempore quisquam error similique nostrum laboriosam?</p>
-    </ul>
+     <!-- Modal para agregar Educacion -->
+<div class="modal fade" id="onAddEducacion" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="addEducacionModal" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="staticBackdropLabel">Agregar Educacion</h5>
+        <button type="button" class="close" data-bs-dismiss="modal" aria-label="Cerrar">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
 
-    <ul>
-      <li><h1>educacion</h1> -
-      <h3>(years)</h3></li>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam perferendis sapiente obcaecati cumque. Voluptates voluptatibus laudantium fuga dignissimos magni. Ullam optio numquam veritatis tenetur tempore quisquam error similique nostrum laboriosam?</p>
-    </ul>
-
+      <div class="modal-body">
+        <form #addForm="ngForm" (ngSubmit)="onAddEducacion(addForm)">
+          <label for="especialidad">especialidad</label><br>
+          <input ngModel type="text" name="especialidad"  class="form-control">
+          <label for="Intitucion">Intitucion </label><br>
+          <input ngModel type="text" name="Intitucion"  class="form-control">
+          <label for="fechaInicio">Fecha de Inicio</label><br>
+          <input ngModel type="text" name="fechaInicio"  class="form-control">
+          <label for="fechafin">fechafin</label><br>
+          <input ngModel type="text" name="fechafin"  class="form-control">
+        <div class="modal-footer">
+              <button type="button" id="add-educacion-modal" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+              <button [disabled]="addForm.invalid" type="submit" class="btn">Agregar</button>
+      </div>
+    </form>
+    </div>
   </div>
-
 </div>
+</div>
+
+
+<!-- Modal para actualizar Exducacion -->
+<div class="modal fade" id="editEducacionModal" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="editEducacionModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+      <div class="modal-content">
+          <div class="modal-header">
+              <h5 class="modal-title" id="editEducacionModalLabel">Editar Educacion</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+              </button>
+          </div>
+          <div class="modal-body">
+              <form #editForm="ngForm">
+                <label for="especialidad">especialidad</label><br>
+                <input ngModel="{{editEducacion?.especialidad}} " type="text" name="especialidad"  class="form-control"><br>
+                <label for="Institucion">Instucion</label><br>
+                <input ngModel="{{editEducacion?.institucion}}" type="text" name="Institucion"  class="form-control">
+                <label for="fechaInicio">Fecha de Inicio</label><br>
+                <input ngModel="{{editEducacion?.fechainicio}}" type="text" name="fechaInicio" class="form-control">
+                <label for="fechafin">Fecha Fin</label><br>
+                <input ngModel="{{editEducacion?.fechafin}}" type="text" name="fechaFin"  class="form-control">
+                <div class="modal-footer">
+                      <button id="editEducacion" type="button" class="btn" data-dismiss="modal">Cancelar</button>
+                      <button (click)="onEditEducacion(editForm.value)" type="button" class="btn" data-dismiss="modal">Guardar cambios</button>
+                  </div>
+              </form>
+          </div>
+
+      </div>
+  </div>
+</div>
+
+<!-- Modal para borrar Educacion -->
+<div class="modal fade" id="deleteEducacionModal" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="deleteEducacionLabel" aria-hidden="true">
+  <div class="modal-dialog">
+      <div class="modal-content">
+          <div class="modal-header">
+              <h5 class="modal-title" id="staticBackdropLabel"></h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+              </button>
+          </div>
+          <div class="modal-body">
+              <p>Esta acción eliminará  "{{deleteEducacion?.especialidad}}". ¿Desea continuar?</p>
+          </div>
+          <div class="modal-footer">
+          <button type="button" class="btn" data-dismiss="modal">No</button>
+          <button (click)="onDeleteEducacion(deleteEducacion.id)" type="button" class="btn" data-dismiss="modal">Sí</button>
+          </div>
+      </div>
+  </div>
+</div>
+
 

@@ -1,29 +1,18 @@
-<div class="fondo">
-  <div class="contenido" id="main-container">
-    <div id="trabajos">
-      <h2 class="trabajos">Experiencia Laboral <button (click)="onOpenModal(null!,'add')" type="button"
-          class="botones_contenido">
-          <i class="fa-light fa-plus"></i>
-        </button> </h2>
-    </div>
-    <div class="listatrabajos" *ngFor="let experiencia of experiencias">
-      <div class="listatrabajosparrafos">
-        <p class="nombreempresa">{{experiencia?.empresa}} - {{experiencia?.cargo}} - {{experiencia?.fechaIngreso}} - {{experiencia?.fechaEgreso}}</p>
-
-      </div>
-      <div id="eliminar-editar-trabajos">
+<div class="row">
+  <h1>Experiencia</h1>
+  <div class="col-lg-11"></div>
+    <div id="main-container" *ngFor="let experiencia of experiencias">
+        <h5>{{experiencia?.empresa}} - {{experiencia?.cargo}}</h5>
+        <h6>{{experiencia?.fechaIngreso}} - {{experiencia?.fechaEgreso}}</h6>
         <button (click)="onOpenModal(experiencia,'edit')" type="button" class="botones_contenido">
           <i class="fa-solid fa-pen"></i>
         </button>
         <button (click)="onOpenModal(experiencia,'delete')" type="button" class="botones_contenido">
           <i class="fa-solid fa-eraser"></i>
         </button>
-      </div>
     </div>
-  </div>
-</div>
 
-      <!-- Modal para agregar Experiencia -->
+     <!-- Modal para agregar Experiencia -->
 <div class="modal fade" id="onAddExperiencia" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="addExperienciaModal" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">

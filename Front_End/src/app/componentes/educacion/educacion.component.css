@@ -1,11 +1,28 @@
-.row{
-  padding: 20px;
-  color: #F7D6BF;
+* {
+  padding:1px 1px 2px 10px;
 
+  background-color: #005086;
+  color:  #FFFFFF;
 }
-div{
-  background: #005086;
+
+.row{
+  padding: 40px;
 }
-h1, h3{
-  display: inline;
+.botones_contenido {
+  border: none;
+  background: none;
+  padding: 2px;
 }
+
+.boton_edicion_texto {
+  padding: 2px 10px;
+  margin-top: 10px;
+  background: #f8e6f1;
+  color:#f8e6f1;
+  border-radius: 5px;
+  font-size: 10px;
+  border: none;
+}
+
+
+
