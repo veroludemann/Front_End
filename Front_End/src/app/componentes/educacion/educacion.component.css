@@ -1,28 +1,37 @@
-* {
-  padding:1px 1px 2px 10px;
+@import 'https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css';
+@import 'https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css';
 
-  background-color: #005086;
-  color:  #FFFFFF;
-}
 
-.row{
-  padding: 40px;
+body{
+  margin-top:20px;
+  background: #f5f5f5;
 }
-.botones_contenido {
+.card {
   border: none;
-  background: none;
-  padding: 2px;
+  -webkit-box-shadow: 0 1px 2px 0 rgba(0,0,0,.05);
+  box-shadow: 0 1px 2px 0 rgba(0,0,0,.05);
+  margin-bottom: 30px;
 }
-
-.boton_edicion_texto {
-  padding: 2px 10px;
-  margin-top: 10px;
-  background: #f8e6f1;
-  color:#f8e6f1;
-  border-radius: 5px;
-  font-size: 10px;
-  border: none;
+.w-60 {
+  width: 60px;
 }
-
-
-
+h1, h2, h3, h4, h5, h6 {
+  margin: 0 0 10px;
+  font-weight: 600;
+  color: black;
+}
+.social-links li a {
+  -webkit-border-radius: 50%;
+  background-color: rgba(89,206,181,.85);
+  border-radius: 50%;
+  color: #005086;
+  display: inline-block;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  width: 30px;
+  font-size: 12px;
+}
+a {
+  color: #707070;
+}
