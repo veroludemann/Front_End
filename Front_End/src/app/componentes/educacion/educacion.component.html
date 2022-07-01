@@ -36,36 +36,28 @@
         </div>
 
 
-<!-- Add Employee Modal -->
+<!-- Agregar Educacion Modal -->
 <div class="modal fade" id="addEducacionModal" tabindex="-1" role="dialog" aria-labelledby="addEducacionModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
        <div class="modal-header">
-          <h5 class="modal-title" id="addEducacionModalLabel">Add Educacion</h5>
+          <h5 class="modal-title" id="addEducacionModalLabel">Agregar Educacion</h5>
           <button type="button" class="cerrar" data-dismiss="modal" aria-label="Cerrar">
           <span aria-hidden="true">&times;</span>
           </button>
        </div>
        <div class="modal-body">
           <form #addForm="ngForm" (ngSubmit)="onAddEducacion(addForm)">
-          <div class="form-group">
-             <label for="institucion">Institucion</label>
-             <input type="text" ngModel name="institucion" class="form-control" id="institucion" placeholder="Institucion" required>
-          </div>
-          <div class="form-group">
-             <label for="especialidad">especialidad</label>
-             <input type="especialidad" ngModel name="especialidad" class="form-control" id="especialidad" placeholder="Especialidad" required>
-          </div>
-          <div class="form-group">
-             <label for="fechainicio">fechainicio</label>
-             <input type="text" ngModel name="fechainicio" class="form-control" id="fechainicio" placeholder="Fechainicio" required>
-          </div>
-          <div class="form-group">
-             <label for="phone">fechafin </label>
-           <input type="text" ngModel name="fechafin" class="form-control" id="fechafin" placeholder="Fechafin" required>
-          </div>
-          <div class="modal-footer">
-             <button type="button" id="add-educacion-form" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+            <label for="institucion">Lugar donde estudiaste</label><br>
+            <input ngModel type="text" name="institucion"  class="form-control">
+            <label for="especialidad">Especialidad </label><br>
+            <input ngModel type="text" name="especialidad"  class="form-control">
+            <label for="fechainicio">Fecha de Inicio</label><br>
+            <input ngModel type="text" name="fechainicio"  class="form-control">
+            <label for="fechaefin">Fecha de Finalización</label><br>
+            <input ngModel type="text" name="fechafin"  class="form-control">
+        <div class="modal-footer">
+             <button type="button" id="add-educacion-form" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
              <button [disabled]="addForm.invalid" type="submit" class="btn btn-primary" >Guardar cambios</button>
           </div>
           </form>
@@ -97,8 +89,8 @@
                 <input type="hidden" ngModel="{{editEducacion?.id}}" name="id"><br>
 
                 <div class="modal-footer">
-                 <button type="button" id="" data-dismiss="modal" class="btn btn-secondary">Close</button>
-                 <button (click)="onUpdateEducacion(editForm.value)" data-dismiss="modal" class="btn btn-primary" >Save changes</button>
+                 <button type="button" id="" data-dismiss="modal" class="btn btn-secondary">Cancelar</button>
+                 <button (click)="onUpdateEducacion(editForm.value)" data-dismiss="modal" class="btn btn-primary" >Guardar</button>
               </div>
            </form>
         </div>
