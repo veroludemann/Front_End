@@ -13,7 +13,7 @@
     </div>
 
      <!-- Modal para agregar Experiencia -->
-<div class="modal fade" id="onAddExperiencia" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="addExperienciaModal" aria-hidden="true">
+<div class="modal fade" id="addExperienciaModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="addExperienciaModal" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
@@ -34,8 +34,8 @@
               <label for="FechaEgreso">FechaEgreso</label><br>
               <input ngModel type="text" name="FechaEgreso"  class="form-control">
         <div class="modal-footer">
-              <button type="button" id="add-experiencia-modal" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-              <button [disabled]="addForm.invalid" type="submit" class="btn">Agregar</button>
+          <button  type="button" id="add-experiencia-modal" class="btn" data-dismiss="modal">Cancelar</button>
+          <button [disabled]="addForm.invalid" type="submit" class="btn">Agregar</button>
       </div>
     </form>
     </div>
@@ -64,9 +64,10 @@
                   <input ngModel="{{editExperiencia?.fechaIngreso}}" type="text" name="fechaIngreso" class="form-control">
                   <label for="fechaEgreso">Fecha de Egreso</label><br>
                   <input ngModel="{{editExperiencia?.fechaEgreso}}" type="text" name="fechaEgreso"  class="form-control">
-                <div class="modal-footer">
-                      <button id="updateExperiencia" type="button" class="btn" data-dismiss="modal">Cancelar</button>
-                      <button (click)="onEditExperiencia(editForm.value)" type="button" class="btn" data-dismiss="modal">Guardar cambios</button>
+                  <input type="hidden" name="id" ngModel="{{editExperiencia?.id}} ">
+                  <div class="modal-footer">
+                  <button id="update-experiencia-modal" type="button" class="btn" data-dismiss="modal">Cancelar</button>
+                  <button (click)="onEditExperiencia(editForm.value)" type="button" class="btn" data-dismiss="modal">Guardar cambios</button>
                   </div>
               </form>
           </div>
