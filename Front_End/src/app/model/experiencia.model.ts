@@ -1,4 +1,4 @@
-import { PersonaService } from "../service/persona.service";
+
 
 
 export interface Experiencia {
@@ -7,6 +7,6 @@ export interface Experiencia {
   cargo:string;
   fechaIngreso:string;
   fechaEgreso:string;
-  persona: PersonaService;
+
 
 }

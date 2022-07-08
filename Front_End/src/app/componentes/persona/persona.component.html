@@ -1,0 +1,18 @@
+<div class="container" *ngFor="let persona of personas">
+  <div class="column">
+
+      <div id="eliminar-editar-sobremi">
+          <button (click)="onOpenModal(null!,'add')" type="button" class="botones_contenido">
+              <i class="fa-solid fa-plus"></i>
+          </button>
+          <button (click)="onOpenModal(persona,'edit')" type="button" class="botones_contenido">
+              <i class="fa-solid fa-pen"></i>
+          </button>
+          <button (click)="onOpenModal(persona,'delete')"  type="button" class="botones_contenido">
+              <i class="fa-solid fa-eraser"></i>
+          </button>
+      </div>
+      <h1> {{persona.nombre}}<span id="strong">{{persona.apellido}} </span> </h1>
+
+
+  </div>

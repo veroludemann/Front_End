@@ -1,16 +1,27 @@
-<div class="row">
-  <h1>Experiencia</h1>
-  <div class="col-lg-11"></div>
-    <div id="main-container" *ngFor="let experiencia of experiencias">
-        <h5>{{experiencia?.empresa}} - {{experiencia?.cargo}}</h5>
-        <h6>{{experiencia?.fechaIngreso}} - {{experiencia?.fechaEgreso}}</h6>
-        <button (click)="onOpenModal(experiencia,'edit')" type="button" class="botones_contenido">
-          <i class="fa-solid fa-pen"></i>
-        </button>
-        <button (click)="onOpenModal(experiencia,'delete')" type="button" class="botones_contenido">
-          <i class="fa-solid fa-eraser"></i>
-        </button>
-    </div>
+<div class="fondo">
+  <div class="contenido" id="main-container">
+      <div id="experiencia">
+          <h4 class="experiencia">Experiencia Laboral <button (click)="onOpenModal(null!,'add')" type="button" class="botones_contenido">
+              <i class="fa-solid fa-plus"></i>
+          </button></h4>
+      </div>
+      <div class="listaempleos" *ngFor="let experiencia of experiencias">
+          <div class="listatraempleos1">
+              <p class="nombreempresa"><span class="titulo">{{experiencia.empresa}}</span> - {{experiencia.cargo}}</p>
+              <p>{{experiencia?.fechaIngreso}} / {{experiencia?.fechaEgreso}} </p>
+          </div>
+          <div id="eliminar-editar-trabajos">
+              <button (click)="onOpenModal(experiencia,'edit')" type="button" class="botones_contenido">
+                  <i class="fa-solid fa-pen"></i>
+              </button>
+              <button (click)="onOpenModal(experiencia,'delete')" type="button" class="botones_contenido">
+                  <i class="fa-solid fa-eraser"></i>
+              </button>
+          </div>
+      </div>
+  </div>
+</div>
+
 
      <!-- Modal para agregar Experiencia -->
 <div class="modal fade" id="addExperienciaModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="addExperienciaModal" aria-hidden="true">
