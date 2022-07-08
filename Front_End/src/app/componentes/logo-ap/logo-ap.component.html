@@ -11,7 +11,8 @@
         <a href="https://www.linkedin.com/in/veronica-ludemann/" target="_blank"><img src="../../../assets/linkedin.png" id="linkedin"></a>
         <a href="https://www.instagram.com/verito235/" target="_blank"><img src="../../../assets/instagram.png" id="instagram"></a>
         <a href="https://github.com/veroludemann" target="_blank"><img src="../../../assets/github.png" id="github"></a>
-        <button type="button" class="btn btn-light" (click)="login()">INGRESO</button>
+        <button type="button" class="btn btn-light" (click)="login()" *ngIf="!isLogged">INGRESO</button>
+        <button type="button" class="btn btn-light" (click)="onLogOut()" *ngIf="isLogged">CERRAR SESION</button>
       </div>
 
     </div>

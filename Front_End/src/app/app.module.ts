@@ -15,6 +15,7 @@ import { HomeComponent } from './componentes/home/home.component';
 import { LoginComponent } from './componentes/login/login.component';
 import { FormsModule } from '@angular/forms';
 import { PersonaComponent } from './componentes/persona/persona.component';
+import { interceptProvider } from './service/interceptor-service';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,9 @@ import { PersonaComponent } from './componentes/persona/persona.component';
     HttpClientModule,
     FormsModule,
   ],
-  providers: [],
+  providers: [
+    interceptProvider
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
