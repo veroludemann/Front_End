@@ -1,4 +1,4 @@
-.container{
+.contenido{
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -10,18 +10,19 @@
 
   img{
     width: 40px;
-    margin: 2px;
+    margin: 6px;
   }
 
   .btn-light{
-    background-color: #005086;
-    border: #9e6bfe;
+    background-color: #f4d58d;
+
     color: white;
     font-size: 20px;
     font-weight: bold;
+    margin: 20px;
   }
 
-  /*... para la vista de celular . . .*/
+  /*... para la vista de celular
 
   @media (max-width: 575px) {
     .container{
@@ -38,3 +39,4 @@
 
     }
   }
+  . . .*/
