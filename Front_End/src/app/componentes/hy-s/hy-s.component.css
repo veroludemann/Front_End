@@ -1,5 +1,9 @@
-.row{
-  background-color: #005086;
-  padding: 20px;
-  color: #F7D6BF
+
+.contenido {
+  font-size: 20px;
+  width: 100%;
+  height: auto;
+  padding: 40px;
+  background-color: #f4d58d;
+
 }

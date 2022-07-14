@@ -6,26 +6,26 @@
   <div class="collapse navbar-collapse" id="navbarColor02">
      <ul class="navbar-nav mr-auto">
         <li class="nav-item active">
-           <a class="nav-link" (click)="onOpenModal(null!, 'add')">Agregar Educacion <span class="sr-only">(current)</span></a>
+           <a class="nav-link" style="cursor: pointer" (click)="onOpenModal(null!, 'add')">Agregar Educacion <span class="sr-only">(current)</span></a>
         </li>
      </ul>
-
   </div>
 </nav>
 
-<div class="container" id="main-container">
+<div class="contenido" id="main-container">
     <div class="row">
-        <div *ngFor="let educacion of educaciones" class="col-md-6 col-xl-3">
-            <div class="card m-b-30">
-                <div class="card-body row">
-                    <div class="col-9">
+        <div *ngFor="let educacion of educaciones" class="">
+            <div class="column">
+                <div class="listaedu">
+                    <div class="">
                       <p>{{educacion?.institucion}} - {{educacion?.especialidad}}</p>
                     </div>
-                    <p class="m-0">{{educacion?.fechainicio}} - {{educacion?.fechafin}}</p>
+                    <p class="">{{educacion?.fechainicio}} - {{educacion?.fechafin}}</p>
                     </div>
+
                 <div class="card-body">
                     <div class="float-center btn-group btn-group-sm">
-                        <a (click)="onOpenModal(educacion, 'edit')" class="btn btn-primary tooltips" data-placement="top" data-toggle="tooltip" data-original-title="Edit"><i class="fa fa-pencil"></i> </a>
+                        <a (click)="onOpenModal(educacion, 'edit')" class="btn btn-danger tooltips" data-placement="top" data-toggle="tooltip" data-original-title="Edit"><i class="fa fa-pencil"></i> </a>
                         <a (click)="onOpenModal(educacion, 'delete')" class="btn btn-secondary tooltips" data-placement="top" data-toggle="tooltip" data-original-title="Delete"><i class="fa fa-times"></i></a>
                     </div>
                 </div>

@@ -1,8 +1,10 @@
-* {
-  padding:1px 1px 2px 10px;
+.contenido {
+  font-size: 20px;
+  width: 100%;
+  height: auto;
+  padding: 40px;
+  background-color: #f4d58d;
 
-  background-color: #005086;
-  color:  #FFFFFF;
 }
 
 .row{

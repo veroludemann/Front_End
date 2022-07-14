@@ -14,9 +14,10 @@ div{
       border-radius: 50%;
       box-shadow: 3px 3px 3px #252525;
       left: 30%;
-      top:30px;
+      top:-120px;
   }
 }
+/*
 @media (max-width: 575px){
   #fotodeperfil{
       position: absolute;
@@ -28,8 +29,16 @@ div{
   }
 }
 
+*/
+
 /*etiqueta nombre*/
 #nombre{
   font-weight: bold;
   margin-top: 30%;
+}
+
+.botones_contenido{
+  border: none;
+  background: none;
+  padding: 2px;
 }

@@ -1,113 +1,37 @@
-<div class="row">
-  <h1>Hard & Soft skills</h1>
-  <div class="text-center col-sm-4 col-md-4 col-lg-4">
-      <circle-progress
-      [percent]="100"
-      [radius]="70"
-      [showUnits]="false"
-      [title]="'HTML'"
-      [titleColor]="'#FFFFFF'"
-      [titleFontSize]="'1em'"
-      [showUnits]="false"
-      [showSubtitle]="false"
-      [outerStrokeWidth]="10"
-      [innerStrokeWidth]="5"
-      [outerStrokeColor]="'#B0CAC7'"
-      [innerStrokeColor]="'#B0CAC7'"
-      [animation]="false"
-      [animationDuration]="600"
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand" style="color:white;">HABILIDADES</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
+  <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarColor02">
+     <!-- <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
 
+           <a class="nav-link"  (click)="onOpenModal(null!, 'add')">
+            Agregar Habilidades <span class="sr-only">(current)</span></a>
+        </li>
+     </ul> -->
+  </div>
+</nav>
 
-      ></circle-progress>
-  </div>
-  <div class="text-center col-sm-4 col-md-4 col-lg-4">
-      <circle-progress
-          [percent]="100"
-          [radius]="70"
-          [showUnits]="false"
-          [title]="'CSS'"
-          [titleColor]="'#FFFFFF'"
-          [titleFontSize]="'1em'"
-          [showUnits]="false"
-          [showSubtitle]="false"
-          [outerStrokeWidth]="10"
-          [innerStrokeWidth]="5"
-          [outerStrokeColor]="'#B0CAC7'"
-          [innerStrokeColor]="'#B0CAC7'"
-          [animation]="false"
-          [animationDuration]="600"
-      ></circle-progress>
-  </div>
-  <div class="text-center col-sm-4 col-md-4 col-lg-4">
-      <circle-progress
-          [percent]="100"
-          [radius]="70"
-          [showUnits]="false"
-          [title]="'JAVA SCRIPT'"
-          [titleColor]="'#FFFFFF'"
-          [titleFontSize]="'1em'"
-          [showUnits]="false"
-          [showSubtitle]="false"
-          [outerStrokeWidth]="10"
-          [innerStrokeWidth]="5"
-          [outerStrokeColor]="'#B0CAC7'"
-          [innerStrokeColor]="'#B0CAC7'"
-          [animation]="false"
-          [animationDuration]="600"
-      ></circle-progress>
-  </div>
-  <div class="text-center col-sm-4 col-md-4 col-lg-4">
-      <circle-progress
-          [percent]="100"
-          [radius]="70"
-          [showUnits]="false"
-          [title]="'MYSQL'"
-          [titleColor]="'#FFFFFF'"
-          [titleFontSize]="'1em'"
-          [showUnits]="false"
-          [showSubtitle]="false"
-          [outerStrokeWidth]="10"
-          [innerStrokeWidth]="5"
-          [outerStrokeColor]="'#B0CAC7'"
-          [innerStrokeColor]="'#B0CAC7'"
-          [animation]="false"
-          [animationDuration]="600"
-      ></circle-progress>
-  </div>
-  <div class="text-center col-sm-4 col-md-4 col-lg-4">
-      <circle-progress
-          [percent]="100"
-          [radius]="70"
-          [showUnits]="false"
-          [title]="'JAVA'"
-          [titleColor]="'#FFFFFF'"
-          [titleFontSize]="'1em'"
-          [showUnits]="false"
-          [showSubtitle]="false"
-          [outerStrokeWidth]="10"
-          [innerStrokeWidth]="5"
-          [outerStrokeColor]="'#B0CAC7'"
-          [innerStrokeColor]="'#B0CAC7'"
-          [animation]="false"
-          [animationDuration]="600"
-      ></circle-progress>
-  </div>
-  <div class="text-center col-sm-4 col-md-4 col-lg-4">
-    <circle-progress
-        [percent]="100"
-        [radius]="70"
-        [showUnits]="false"
-        [title]="'GITHUB'"
-        [titleColor]="'#FFFFFF'"
-        [titleFontSize]="'1em'"
-        [showUnits]="false"
-        [showSubtitle]="false"
-        [outerStrokeWidth]="10"
-        [innerStrokeWidth]="5"
-        [outerStrokeColor]="'#B0CAC7'"
-        [innerStrokeColor]="'#B0CAC7'"
-        [animation]="false"
-        [animationDuration]="600"
-    ></circle-progress>
+<div class="contenido">
+  <h6>HTML</h6>
+  <div class="progress">
+    <div class="progress-bar bg-danger" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+  </div><br>
 
-</div>
+  <h6>CSS</h6>
+  <div class="progress">
+    <div class="progress-bar bg-danger" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+  </div><br>
+
+  <h6>JAVASCRIP</h6>
+  <div class="progress">
+    <div class="progress-bar bg-danger" role="progressbar" style="width: 40%" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"></div>
+  </div><br>
+
+  <h6>JAVA</h6>
+  <div class="progress">
+    <div class="progress-bar bg-danger" role="progressbar" style="width: 55%" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100"></div>
+  </div><br>
+
