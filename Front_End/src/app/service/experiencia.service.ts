@@ -20,8 +20,8 @@ export class ExperienciaService {
   return this.http.post<Experiencia>(`${this.apiServerUrl}/experiencia/add`, experiencia);
 }
 
-public updateExperiencia(experiencia: Experiencia): Observable<Experiencia>{
-  return this.http.put<Experiencia>(`${this.apiServerUrl}/experiencia/update`, experiencia);
+public editExperiencia(experiencia: Experiencia): Observable<Experiencia>{
+  return this.http.put<Experiencia>(`${this.apiServerUrl}/experiencia/edit`, experiencia);
 }
 
 public deleteExperiencia(id: number): Observable<void>{

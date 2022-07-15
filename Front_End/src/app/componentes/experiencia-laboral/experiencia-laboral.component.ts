@@ -10,20 +10,20 @@ import { ExperienciaService } from 'src/app/service/experiencia.service';
   styleUrls: ['./experiencia-laboral.component.css']
 })
 export class ExperienciaLaboralComponent implements OnInit {
-  public experiencias: Experiencia[] = [];
+  public experiencia!: Experiencia[];
   public editExperiencia!: Experiencia;
   public deleteExperiencia!: Experiencia;
 
   constructor(private experienciaService: ExperienciaService) { }
 
-  ngOnInit(): void {
+  ngOnInit(){
     this.getExperiencias();
   }
 
   public getExperiencias(): void {
     this.experienciaService.getExperiencias().subscribe({
       next: (response: Experiencia[]) => {
-        this.experiencias = response;
+        this.experiencia = response;
       },
       error: (error: HttpErrorResponse) => {
         alert(error.message);
@@ -46,8 +46,8 @@ export class ExperienciaLaboralComponent implements OnInit {
     });
   }
 
-  public onEditExperiencia(experiencia: Experiencia): void {
-    this.experienciaService.updateExperiencia(experiencia).subscribe({
+  public onUpdateExperiencia(experiencia: Experiencia): void {
+    this.experienciaService.editExperiencia(experiencia).subscribe({
       next: (response: Experiencia) => {
         console.log(response);
         this.getExperiencias();
@@ -76,17 +76,17 @@ export class ExperienciaLaboralComponent implements OnInit {
     const button = document.createElement('button');
     button.type = 'button';
     button.style.display = 'none'
-    button.setAttribute('data-bs-toggle', 'modal');
+    button.setAttribute('data-toggle', 'modal');
     if (mode === 'add') {
-      button.setAttribute('data-bs-target', '#addExperienciaModal');
+      button.setAttribute('data-target', '#addExperienciaModal');
     }
     if (mode === 'edit') {
       this.editExperiencia = experiencia;
-      button.setAttribute('data-bs-target', '#editExperienciaModal');
+      button.setAttribute('data-target', '#updateExperienciaModal');
     }
     if (mode === 'delete') {
       this.deleteExperiencia = experiencia;
-      button.setAttribute('data-bs-target', '#deleteExperienciaModal');
+      button.setAttribute('data-target', '#deleteExperienciaModal');
     }
     container?.appendChild(button);
     button.click();

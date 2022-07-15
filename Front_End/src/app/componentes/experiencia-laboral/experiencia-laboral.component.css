@@ -1,3 +1,7 @@
+@import 'https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css';
+@import 'https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css';
+
+
 .contenido {
   font-size: 20px;
   width: 100%;
@@ -7,22 +11,40 @@
 
 }
 
-.row{
-  padding: 40px;
 
+
+
+
+/*
+.w-60 {
+  width: 60px;
 }
-.botones_contenido {
-  border: none;
-  background: none;
-  padding: 2px;
+*/
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0 0 10px;
+  font-weight: 600;
+  color: black;
 }
 
-.boton_edicion_texto {
-  padding: 2px 10px;
-  margin-top: 10px;
-  background: #f8e6f1;
-  color:#f8e6f1;
-  border-radius: 5px;
-  font-size: 10px;
-  border: none;
+.social-links li a {
+  -webkit-border-radius: 50%;
+  background-color: rgba(247, 157, 132, 0.85);
+  border-radius: 50%;
+  color: #f79d84;
+  display: inline-block;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  width: 30px;
+  font-size: 12px;
+}
+
+
+a {
+  color: #707070;
 }

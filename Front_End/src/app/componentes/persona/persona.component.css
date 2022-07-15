@@ -46,3 +46,19 @@ h1{
   background: none;
   padding: 2px;
 }
+
+.social-links li a {
+  -webkit-border-radius: 50%;
+  background-color: rgba(247, 157, 132, 0.85);
+  border-radius: 50%;
+  color: #f79d84;
+  display: inline-block;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  width: 30px;
+  font-size: 12px;
+
+}
+
+
