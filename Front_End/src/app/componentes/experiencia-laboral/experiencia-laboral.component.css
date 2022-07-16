@@ -1,34 +1,12 @@
 @import 'https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css';
 @import 'https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css';
 
-
 .contenido {
   font-size: 20px;
   width: 100%;
   height: auto;
   padding: 40px;
   background-color: #f4d58d;
-
-}
-
-
-
-
-
-/*
-.w-60 {
-  width: 60px;
-}
-*/
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  margin: 0 0 10px;
-  font-weight: 600;
-  color: black;
 }
 
 .social-links li a {
@@ -43,7 +21,6 @@ h6 {
   width: 30px;
   font-size: 12px;
 }
-
 
 a {
   color: #707070;

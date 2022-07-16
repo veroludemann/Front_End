@@ -14,13 +14,11 @@
 
 <div class="contenido" id="main-container">
     <div class="row">
-        <div *ngFor="let educacion of educaciones" class="">
+        <div *ngFor="let educacion of educaciones">
             <div class="column">
                 <div class="listaedu">
-                    <div class="">
-                      <p>{{educacion?.institucion}} - {{educacion?.especialidad}}</p>
-                    </div>
-                    <p class="">{{educacion?.fechainicio}} - {{educacion?.fechafin}}</p>
+                  <p>{{educacion?.institucion}} - {{educacion?.especialidad}}</p>
+                  <p>{{educacion?.fechainicio}} - {{educacion?.fechafin}}</p>
                     </div>
 
                 <div class="card-body">

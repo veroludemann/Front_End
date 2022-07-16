@@ -14,14 +14,14 @@
 
 <div class="contenido" id="main-container">
     <div class="row">
-        <div *ngFor="let experiencia of experiencia" class="">
+        <div *ngFor="let experiencia of experiencia">
             <div class="column">
                 <div class="listaedu">
-                    <div class="">
+
                       <p>{{experiencia.empresa}} - {{experiencia.cargo}}</p>
-                    </div>
-                    <p class="">{{experiencia?.fechaIngreso}} - {{experiencia?.fechaEgreso}}</p>
-                    </div>
+
+                    <p>{{experiencia?.fechaIngreso}} - {{experiencia?.fechaEgreso}}</p>
+                </div>
 
                 <div class="card-body">
                     <div class="float-center btn-group btn-group-sm">
