@@ -14,26 +14,13 @@ h1{
 @media (min-width: 576px){
   #fotodeperfil{
       position: absolute;
-      width: 60%;
-      border-radius: 50%;
+      width: 90%;
+      border-radius: 100%;
       box-shadow: 3px 3px 3px #252525;
-      left: 30%;
+      left: 34%;
       top:-120px;
   }
 }
-/*
-@media (max-width: 575px){
-  #fotodeperfil{
-      position: absolute;
-      width: 28%;
-      border-radius: 50%;
-      box-shadow: 3px 3px 3px #f4d58d;
-      left: 33%;
-      top:310px;
-  }
-}
-
-*/
 
 /*etiqueta nombre*/
 #nombre{
@@ -47,18 +34,17 @@ h1{
   padding: 2px;
 }
 
-.social-links li a {
-  -webkit-border-radius: 50%;
-  background-color: rgba(247, 157, 132, 0.85);
-  border-radius: 50%;
-  color: #f79d84;
-  display: inline-block;
-  height: 30px;
-  line-height: 30px;
-  text-align: center;
-  width: 30px;
-  font-size: 12px;
-
+/*
+@media (max-width: 575px){
+  #fotodeperfil{
+      position: absolute;
+      width: 40%;
+      border-radius: 50%;
+      box-shadow: 3px 3px 3px #f4d58d;
+      left: 33%;
+      top:-200px;
+  }
 }
+*/
 
 
