@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { Persona } from 'src/app/model/persona.model';
 import { PersonaService } from 'src/app/service/persona.service';
+import { TokenService } from 'src/app/service/token.service';
 
 @Component({
   selector: 'app-persona',
@@ -13,11 +14,20 @@ export class PersonaComponent implements OnInit {
   public personas: Persona[] = [];
   public editPersona!: Persona;
   public deletePersona!: Persona;
+  roles: string[] = [];
+  isAdmin = false;
 
-  constructor(private personaService: PersonaService) { }
+
+  constructor(private personaService: PersonaService,  private tokenService: TokenService) { }
 
   ngOnInit() {
     this.getPersonas();
+    this.roles = this.tokenService.getAuthorities();
+    this.roles.forEach( role => {
+      if(role === 'ROLE_ADMIN') {
+        this.isAdmin = true;
+      }
+    })
 
   }
     public getPersonas(): void {
