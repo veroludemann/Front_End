@@ -9,7 +9,7 @@
   background-color: #f4d58d;
 }
 
-.social-links li a {
+/* .social-links li a {
   -webkit-border-radius: 50%;
   background-color: rgba(247, 157, 132, 0.85);
   border-radius: 50%;
@@ -20,7 +20,7 @@
   text-align: center;
   width: 30px;
   font-size: 12px;
-}
+} */
 
 a {
   color: #707070;
