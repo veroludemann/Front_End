@@ -9,6 +9,8 @@ div{
 
 h1{
   color: #c82333;
+  font-family: 'Abril Fatface', cursive;
+
 }
 /*Estilo de la foto de perfil*/
 @media (min-width: 576px){

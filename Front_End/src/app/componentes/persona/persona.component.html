@@ -7,9 +7,9 @@
   <h5>{{ persona.sobremi }}</h5>
   <div class="card-body">
   <div class="float-center btn-group btn-group-sm">
-    <a (click)="onOpenModal(null!, 'add')" class="btn btn-secondary tooltips" data-placement="top" data-toggle="tooltip" data-original-title="Agregar"><i class="fa-solid fa-plus"></i></a>
-    <a (click)="onOpenModal(persona, 'edit')" class="btn btn-danger tooltips" data-placement="top" data-toggle="tooltip" data-original-title="Edit"><i class="fa fa-pencil"></i> </a>
-    <a (click)="onOpenModal(persona, 'delete')" class="btn btn-secondary tooltips" data-placement="top" data-toggle="tooltip" data-original-title="Delete"><i class="fa fa-times"></i></a>
+    <a *ngIf="isAdmin" (click)="onOpenModal(null!, 'add')" class="btn btn-secondary tooltips" data-placement="top" data-toggle="tooltip" data-original-title="Agregar"><i class="fa-solid fa-plus"></i></a>
+    <a *ngIf="isAdmin" (click)="onOpenModal(persona, 'edit')" class="btn btn-danger tooltips" data-placement="top" data-toggle="tooltip" data-original-title="Edit"><i class="fa fa-pencil"></i> </a>
+    <a *ngIf="isAdmin" (click)="onOpenModal(persona, 'delete')" class="btn btn-secondary tooltips" data-placement="top" data-toggle="tooltip" data-original-title="Delete"><i class="fa fa-times"></i></a>
   </div>
 
   </div>

@@ -11,17 +11,19 @@ import { TokenService } from 'src/app/service/token.service';
   styleUrls: ['./educacion.component.css']
 })
 export class EducacionComponent implements OnInit {
-  public educaciones!: Educacion[];
+  public educaciones: Educacion[] = [];
   public editEducacion!: Educacion;
   public deleteEducacion!: Educacion;
   roles: string[] = [];
   isAdmin = false;
 
 
-  constructor(private educacionService: EducacionService,  private tokenService: TokenService) { }
+  constructor(private educacionService: EducacionService,
+    private tokenService: TokenService) { }
 
   ngOnInit() {
     this.getEducaciones();
+    this.roles = this.tokenService.getAuthorities();
     this.roles.forEach( role => {
       if(role === 'ROLE_ADMIN') {
         this.isAdmin = true;

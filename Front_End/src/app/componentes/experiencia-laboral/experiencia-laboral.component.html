@@ -17,21 +17,15 @@
 <div class="contenido" id="main-container">
   <div class="row">
     <div *ngFor="let experiencia of experiencia">
-      <div class="column">
-        <div class="listaedu">
-          <h5>{{experiencia.empresa}}</h5>
-          <h6>{{experiencia.cargo}}</h6>
-
-        </div>
-
-        <div class="card-body">
-          <div class="float-center btn-group btn-group-sm">
-            <a (click)="onOpenModal(experiencia, 'edit')" class="btn btn-danger tooltips" data-placement="top"
-              data-toggle="tooltip" data-original-title="Edit"><i class="fa fa-pencil"></i> </a>
-            <a (click)="onOpenModal(experiencia, 'delete')" class="btn btn-secondary tooltips" data-placement="top"
-              data-toggle="tooltip" data-original-title="Delete"><i class="fa fa-times"></i></a>
-          </div>
-        </div>
+      <div class="listaedu">
+        <h5>{{experiencia.empresa}}</h5>
+        <h6>{{experiencia.cargo}}</h6>
+      </div>
+      <div class="float-center btn-group btn-group-sm">
+        <a *ngIf="isAdmin" (click)="onOpenModal(experiencia, 'edit')" class="btn btn-danger tooltips"
+          data-placement="top" data-toggle="tooltip" data-original-title="Edit"><i class="fa fa-pencil"></i> </a>
+        <a *ngIf="isAdmin" (click)="onOpenModal(experiencia, 'delete')" class="btn btn-secondary tooltips"
+          data-placement="top" data-toggle="tooltip" data-original-title="Delete"><i class="fa fa-times"></i></a>
       </div>
     </div>
 

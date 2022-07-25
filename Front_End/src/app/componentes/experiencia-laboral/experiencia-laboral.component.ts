@@ -20,7 +20,7 @@ export class ExperienciaLaboralComponent implements OnInit {
   constructor(private experienciaService: ExperienciaService,
     private tokenService: TokenService) { }
 
-  // isLogged = false;
+
 
   ngOnInit(){
     this.getExperiencias();

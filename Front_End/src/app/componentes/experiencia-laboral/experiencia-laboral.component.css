@@ -9,6 +9,14 @@
   background-color: #f4d58d;
 }
 
+#listaedu{
+  margin-top: 10px;
+}
+
+h5 {
+  font-family: 'Abril Fatface', cursive;
+}
+
 /* .social-links li a {
   -webkit-border-radius: 50%;
   background-color: rgba(247, 157, 132, 0.85);

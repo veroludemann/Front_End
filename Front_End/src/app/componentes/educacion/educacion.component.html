@@ -7,8 +7,8 @@
   <div class="collapse navbar-collapse" id="navbarColor02">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
-        <a class="nav-link" style="cursor: pointer" (click)="onOpenModal(null!, 'add')">Agregar Educacion <span
-            class="sr-only">(current)</span></a>
+        <a class="nav-link" style="cursor: pointer" *ngIf="isAdmin" (click)="onOpenModal(null!, 'add')">Agregar
+          Educacion <span class="sr-only">(current)</span></a>
       </li>
     </ul>
   </div>
@@ -17,21 +17,17 @@
 <div class="contenido" id="main-container">
   <div class="row">
     <div *ngFor="let educacion of educaciones">
-      <div class="column">
-        <div class="listaedu">
-          <h5>{{ educacion?.institucion }}</h5>
-          <h6>{{ educacion?.especialidad }}</h6>
-        </div>
+      <div class="listaedu">
+        <p>{{ educacion?.institucion }}<p>
+        <h6>{{ educacion?.especialidad }}</h6>
+      </div>
+      <div class="float-center btn-group btn-group-sm">
+        <a *ngIf="isAdmin" (click)="onOpenModal(educacion, 'edit')" class="btn btn-danger tooltips" data-placement="top"
+          data-toggle="tooltip" data-original-title="Edit"><i class="fa fa-pencil"></i>
+        </a>
+        <a *ngIf="isAdmin" (click)="onOpenModal(educacion, 'delete')" class="btn btn-secondary tooltips"
+          data-placement="top" data-toggle="tooltip" data-original-title="Delete"><i class="fa fa-times"></i></a>
 
-        <div class="card-body">
-          <div class="float-center btn-group btn-group-sm">
-            <a (click)="onOpenModal(educacion, 'edit')" class="btn btn-danger tooltips" data-placement="top"
-              data-toggle="tooltip" data-original-title="Edit"><i class="fa fa-pencil"></i>
-            </a>
-            <a (click)="onOpenModal(educacion, 'delete')" class="btn btn-secondary tooltips" data-placement="top"
-              data-toggle="tooltip" data-original-title="Delete"><i class="fa fa-times"></i></a>
-          </div>
-        </div>
       </div>
     </div>
 
