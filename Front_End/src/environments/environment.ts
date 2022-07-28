@@ -5,7 +5,7 @@
 export const environment = {
   production: false,
    apiBaseUrl:'https://backend-argp.herokuapp.com',
-   authURL:'https://backend-argp.herokuapp.com/auth'
+   apiAuthUrl:'https://backend-argp.herokuapp.com/auth'
 };
 
 /*
