@@ -1,7 +1,5 @@
 @import 'https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css';
 @import 'https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css';
-
-
 .contenido {
   font-size: 20px;
   width: 100%;
@@ -9,27 +7,9 @@
   padding: 40px;
   background-color: #f4d58d;
 }
-
-
 h5 {
   font-family: 'Abril Fatface', cursive;
 }
-
-
-.social-links li a {
-  -webkit-border-radius: 50%;
-  background-color: rgba(247, 157, 132, 0.85);
-  border-radius: 50%;
-  color: #f79d84;
-  display: inline-block;
-  height: 30px;
-  line-height: 30px;
-  text-align: center;
-  width: 30px;
-  font-size: 12px;
-}
-
-
 a {
   color: #707070;
 }

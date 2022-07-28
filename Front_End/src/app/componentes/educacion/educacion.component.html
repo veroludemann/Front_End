@@ -18,8 +18,8 @@
   <div class="row">
     <div *ngFor="let educacion of educaciones">
       <div class="listaedu">
-        <p>{{ educacion?.institucion }}<p>
-        <h6>{{ educacion?.especialidad }}</h6>
+        <h5>{{ educacion.institucion }}</h5>
+        <h6>{{ educacion.especialidad }}</h6>
       </div>
       <div class="float-center btn-group btn-group-sm">
         <a *ngIf="isAdmin" (click)="onOpenModal(educacion, 'edit')" class="btn btn-danger tooltips" data-placement="top"
