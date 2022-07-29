@@ -23,8 +23,7 @@
       </div>
       <div class="float-center btn-group btn-group-sm">
         <a *ngIf="isAdmin" (click)="onOpenModal(educacion, 'edit')" class="btn btn-danger tooltips" data-placement="top"
-          data-toggle="tooltip" data-original-title="Edit"><i class="fa fa-pencil"></i>
-        </a>
+          data-toggle="tooltip" data-original-title="Edit"><i class="fa fa-pencil"></i></a>
         <a *ngIf="isAdmin" (click)="onOpenModal(educacion, 'delete')" class="btn btn-secondary tooltips"
           data-placement="top" data-toggle="tooltip" data-original-title="Delete"><i class="fa fa-times"></i></a>
 
@@ -74,9 +73,7 @@
       <div class="modal-dialog" role="document">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title" id="updateEducacionModalLabel">
-              Editar Educacion
-            </h5>
+            <h5 class="modal-title" id="updateEducacionModalLabel">Editar Educacion </h5>
             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
               <span aria-hidden="true">&times;</span>
             </button>
@@ -94,9 +91,7 @@
               <input type="hidden" ngModel="{{ editEducacion?.id }}" name="id" /><br />
 
               <div class="modal-footer">
-                <button type="button" id="" data-dismiss="modal" class="btn btn-secondary">
-                  Cancelar
-                </button>
+                <button type="button" id="" data-dismiss="modal" class="btn btn-secondary">Cancelar </button>
                 <button (click)="onUpdateEducacion(editForm.value)" data-dismiss="modal" class="btn btn-primary">
                   Guardar
                 </button>
