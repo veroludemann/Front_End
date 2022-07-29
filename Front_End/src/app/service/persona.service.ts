@@ -19,8 +19,8 @@ export class PersonaService {
     return this.http.get<Persona[]>(`${this.apiServerUrl}/persona/all`);
   }
 
-  public updatePersona(persona: Persona): Observable<Persona> {
-    return this.http.put<Persona>(`${this.apiServerUrl}/persona/update`, persona);
+  public editPersona(persona: Persona): Observable<Persona> {
+    return this.http.put<Persona>(`${this.apiServerUrl}/persona/edit`, persona);
   }
 
   public addPersona(persona: Persona): Observable<Persona> {

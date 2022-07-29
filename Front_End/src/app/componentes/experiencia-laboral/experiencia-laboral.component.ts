@@ -62,9 +62,10 @@ export class ExperienciaLaboralComponent implements OnInit {
   }
 
   public onUpdateExperiencia(experiencia: Experiencia): void {
+    console.log(experiencia);
     this.experienciaService.editExperiencia(experiencia).subscribe({
       next: (response: Experiencia) => {
-        console.log(response);
+
         this.getExperiencias();
       },
       error: (error: HttpErrorResponse) => {

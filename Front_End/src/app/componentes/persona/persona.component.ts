@@ -56,7 +56,7 @@ export class PersonaComponent implements OnInit {
       });
     }
     public onUpdatePersona(persona: Persona): void{
-      this.personaService.updatePersona(persona).subscribe({
+      this.personaService.editPersona(persona).subscribe({
         next: (response: Persona) => {
           console.log(response);
           this.getPersonas();
