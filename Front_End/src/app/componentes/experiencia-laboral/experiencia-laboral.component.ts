@@ -11,7 +11,7 @@ import { TokenService } from 'src/app/service/token.service';
   styleUrls: ['./experiencia-laboral.component.css']
 })
 export class ExperienciaLaboralComponent implements OnInit {
-  public experiencia: Experiencia[] = [];
+  public experiencias: Experiencia[] = [];
   public editExperiencia!: Experiencia;
   public deleteExperiencia!: Experiencia;
   roles: string[] = [];
@@ -38,7 +38,7 @@ export class ExperienciaLaboralComponent implements OnInit {
   public getExperiencias(): void {
     this.experienciaService.getExperiencias().subscribe({
       next: (response: Experiencia[]) => {
-        this.experiencia = response;
+        this.experiencias = response;
       },
       error: (error: HttpErrorResponse) => {
         alert(error.message);
